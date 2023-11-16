@@ -1,5 +1,5 @@
 import time
-
+###Linear method
 def locate_card_linear(cards,num):
     global time_now
     time_now = time.time()
@@ -9,6 +9,8 @@ def locate_card_linear(cards,num):
 #print(locate_card_linear([x for x in range(100000000,0,-1)],5))
 #end_time=time.time() - time_now
 #print(end_time)
+
+#Binary method
 def locate_card_binary(cards,num):
     global time_now
     time_now = time.time()
