@@ -13,12 +13,6 @@ def binary_serch(a):
     if len(a) <= 1 or a[start] < a[end]:
         return  0
     while True:
-        # tmid, tsta, tend = a[mid], a[start], a[end]
-        # if a[mid] < a[mid+1] and a[mid] > a[end] and a[mid] > a[start]:
-        #     start=a[mid+1]
-        # else:
-        #     end=mid-1
-
         mid = (start + end) // 2
         tmid, tsta, tend = a[mid], a[start], a[end]
         if mid == start and end == mid+1:
