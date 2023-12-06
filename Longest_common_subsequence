@@ -1,0 +1,12 @@
+def sub_sequence_longest(str1,str2,idx1=0,idx2=0):
+    if len(str1)==idx1 or len(str2) == idx2:
+        return 0
+    elif str1[idx1] == str2[idx2]:
+        return 1+sub_sequence_longest(str1,str2,idx1+1,idx2+1)
+    else:
+        option1=sub_sequence_longest(str1,str2,idx1+1,idx2)
+        option2=sub_sequence_longest(str1,str2,idx1,idx2+1)
+        return max(option1,option2)
+print(sub_sequence_longest('abc','asdfgbyhic'))
+
+#refer yt link: https://www.youtube.com/watch?v=jHGgXV27qtk
