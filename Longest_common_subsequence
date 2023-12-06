@@ -1,3 +1,5 @@
+#refer yt link: https://www.youtube.com/watch?v=jHGgXV27qtk
+
 def sub_sequence_longest(str1,str2,idx1=0,idx2=0):
     if len(str1)==idx1 or len(str2) == idx2:
         return 0
@@ -9,4 +11,22 @@ def sub_sequence_longest(str1,str2,idx1=0,idx2=0):
         return max(option1,option2)
 print(sub_sequence_longest('abc','asdfgbyhic'))
 
-#refer yt link: https://www.youtube.com/watch?v=jHGgXV27qtk
+#normal method using dynamic table method. Refer the given yt link
+def loop_lcs(str1,str2):
+    ans={}
+    for row in range (len(str1)+1):
+        for column in range (len(str2)+1):
+            temp_c, temp_r = str1[row - 1], str2[column - 1]
+            if row==0 or column==0:
+                ans[row,column]=0
+                continue
+            elif str1[row-1] == str2 [column-1]:
+                temp_c,temp_r=str1[row-1],str2 [column-1]
+                ans[row, column] = 1 + ans[row - 1, column - 1]
+                temp=ans[row, column]
+            else:
+                temp_c, temp_r = str1[row - 1], str2[column - 1]
+                ans[row, column] = max(ans[row, column - 1], ans[row - 1, column])
+                temp=ans[row, column]
+    return ans
+print(loop_lcs('abcd','aacb'))
