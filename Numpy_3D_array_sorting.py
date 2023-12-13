@@ -7,3 +7,5 @@ ab = np.array([[[1, 2, 3], [5, 9, 6], [7, 0, -3]],
 sorted_reshaped_ab = np.sort(ab.flatten()).reshape(ab.shape)
 
 print(sorted_reshaped_ab)
+
+# visual: https://www.youtube.com/watch?v=SjtXNJy9RCk
