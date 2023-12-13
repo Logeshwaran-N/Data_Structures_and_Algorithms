@@ -8,4 +8,5 @@ sorted_reshaped_ab = np.sort(ab.flatten()).reshape(ab.shape)
 
 print(sorted_reshaped_ab)
 
-# visual: https://www.youtube.com/watch?v=SjtXNJy9RCk
+# visual shape: https://www.youtube.com/watch?v=SjtXNJy9RCk
+#visual axis understanding: https://www.youtube.com/watch?v=nS0oKBbNjWY
